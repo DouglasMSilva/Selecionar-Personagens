@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Personagens</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        h1 {
+            margin-left: 41.3%;
+        }
+        
+        .containerA img, .containerA p {
+          position: absolute;
+          top: 50%;
+          left: 20%;
+        }
+
+        .containerB {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center;
+            align-items: center; */
+            gap: 2px;
+            top: 50%;
+            left: 40%;
+        }
+
+        .menuSelect {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .circle {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            border: 2px solid dodgerblue;
+            background: none;
+            /* border-radius: 50%; */
+            
+        }
+
+        .circle img {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: 1px;
+            cursor: pointer;
+        }
+
+        #piccolo, #vegeta {
+            width: 195px;
+        }
+
+        .bio {
+            display: none;
+            flex-direction: column;
+        }
+
+        #bioVegeta {
+            width: 250px;
+            height: 430px;
+        }
+
+        #bioPiccolo {
+            width: 350px;
+            height: 500px;
+        }
+
+        #bioKrillin {
+            width: 200px;
+            height: 280px;
+        }
+
+        #bioGohan {
+            width: 150px;
+            height: 250px;
+        }
+
+        #bioYamcha {
+            width: 250px;
+            height: 450px;
+        }
+
+        #bioTien {
+            width: 300px;
+            height: 450px;
+        }
+
+        #bioChaos {
+            width: 150px;
+            height: 200px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Selecione um personagem</h1>
+    <div class="container">
+
+        
+        <div class="containerA">  
+            <div id="gokuProfile">    
+                <img  class="bio" id="bioGoku" src="images/Goku_Artwork.webp">
+            </div>
+
+            <div id="vegetaProfile">
+                <img class="bio" id="bioVegeta" src="images/Vegeta_Artwork.webp">
+            </div>
+
+            <div id="gohanProfile">
+                <img class="bio" id="bioGohan" src="images/Gohan_Kid.webp">
+            </div>
+
+            <div id="piccoloProfile">
+                <img class="bio" id="bioPiccolo" src="images/Piccolo_Cape.png">
+            </div>
+
+            <div id="krillinProfile">
+                <img class="bio" id="bioKrillin" src="images/krillin_dbz_kakarot.png">
+            </div>
+
+            <div id="yamchaProfile">
+                <img class="bio" id="bioYamcha" src="images/yamcha__saiyan_saga__render__dbz_kakarot__by_maxiuchiha22_ddmjua0-414w-2x.png">
+            </div>
+
+            <div id="tienProfile">
+                <img class="bio" id="bioTien" src="images/tien_shinhan__saiyan_saga__render__dbz_kakarot__by_maxiuchiha22_ddmju9o-414w-2x.png">
+            </div>
+
+            <div id="chaosProfile">
+                <img class="bio" id="bioChaos" src="images/Chaos.png">
+            </div>
+        </div> 
+
+        <div class="containerB">
+
+            <div class="menuSelect">
+                <div class="circle">
+                    <img id="goku" src="images/goku_cs.png" onclick="mostrar(0)">
+                </div>
+                <div class="circle">
+                    <img id="vegeta" src="images/vegeta_cs3.png" onclick="mostrar(1)">
+                </div>
+            </div>
+            <div class="menuSelect">
+                <div class="circle">
+                    <img id="gohan" src="images/gohan_cs1.png" onclick="mostrar(2)">
+                </div>
+                <div class="circle">
+                    <img id="piccolo" src="images/piccolo_cs2.png" onclick="mostrar(3)">
+                </div>
+            </div>
+            <div class="menuSelect">
+                <div class="circle">
+                    <img id="krillin" src="images/krillin_cs.png" onclick="mostrar(4)">
+                </div>
+                <div class="circle">
+                    <img id="yamcha" src="images/yamcha_cs.png" onclick="mostrar(5)">
+                </div>
+            </div>
+            <div class="menuSelect">
+                <div class="circle">
+                    <img id="tien" src="images/tien_cs.png" onclick="mostrar(6)">
+                </div>
+    
+                <div class="circle">
+                    <img id="chaos" src="images/chaos_cs.png" onclick="mostrar(7)">
+                </div>
+            </div>
+ 
+        </div>
+
+    </div>
+
+
+    <script>
+        function mostrar(index) {
+            const bios = document.querySelectorAll(".bio");
+            bios.forEach(bio => bio.style.display = "none");
+            bios[index].style.display = "block";
+        }
+    </script>
+</body>
+</html>
